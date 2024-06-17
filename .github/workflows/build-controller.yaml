@@ -19,10 +19,10 @@ jobs:
         name: Prepare
         id: prepare
         run: |
-          DOCKER_IMAGE=ghcr.io/paolomainardi/additronk8s-game-controller
+          DOCKER_IMAGE=ghcr.io/JTheinert/additronk8s-game-controller
           DOCKER_PLATFORMS=linux/amd64,linux/arm/v7,linux/arm64
           DOCKERFILE_PATH=./k8s/src/game-controller
-          VERSION=latest
+          VERSION=0.1.0
 
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             VERSION=${GITHUB_REF#refs/tags/v}
